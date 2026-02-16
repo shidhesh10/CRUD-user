@@ -15,10 +15,8 @@ export default function App() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  // reset form after create
   const [newFormVersion, setNewFormVersion] = useState(0);
 
-  // delete dialog
   const [deleteTarget, setDeleteTarget] = useState(null);
 
   async function loadUsers() {
@@ -37,6 +35,13 @@ export default function App() {
   useEffect(() => {
     loadUsers();
   }, []);
+
+  useEffect(() => {
+    if (!success) return;
+
+    const t = setTimeout(() => setSuccess(""), 3000);
+    return () => clearTimeout(t);
+  }, [success]);
 
   async function handleSubmit(payload) {
     setError("");
