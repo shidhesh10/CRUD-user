@@ -12,6 +12,15 @@ A full-stack User Management application built with:
 
 ▲ Vercel (Frontend Deployment)
 
+## 🔗 Live Demo
+
+Frontend:
+https://crud-user-app-shidhesh.vercel.app
+
+Backend API:
+https://user-crud-api-7hir.onrender.com/users
+
+
 📂 Project Structure
 /backend     → JSON-server API (Node)
 /frontend    → React + Tailwind app
